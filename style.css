@@ -1,0 +1,216 @@
+body {
+	margin: 0%;
+	padding: 0%;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #666;
+	background: #c7c7c7;
+	font-size: 1em;
+	line-height: 1.5em;
+}
+header {
+    background: #c7c7c7;
+    height: 300px;;
+	width: 100%;
+}
+
+input{
+    background: #1e90ff;
+	border: #1e90ff;
+    color: white;
+    cursor: pointer;
+    margin-left: 910px;
+    height: 35px;
+    width: 90px;
+    font-size:0.9em;
+}
+input:hover {
+	color: #333;
+	background: #0f78e0e5;
+}
+
+h1 {
+	margin-top: 50px;
+	font-size: 2.3em;
+	line-height: 1.3em;
+	margin: 10px 0;
+	text-align: center;
+	font-weight: 300;
+    color: white;
+	padding-top: 65px;
+}
+h3 {
+    text-align: center;
+    margin: 10px 0;
+    line-height: 1,3em;
+    font-size: 1.3em;
+    font-weight: 100;
+    color: white;
+}
+
+
+
+#main-header {
+	background: #333;
+	color: white;
+	height: 60px;
+    align-items: center;
+}	
+	#main-header a {
+		color: white;
+	}
+
+#logo-header {
+	float: left;
+	padding: 15px 0 0 20px;
+	text-decoration: none;
+}
+.site-name {
+		color: white;
+		display: block;
+		font-weight: 700;
+		font-size: 1.2em;
+	}
+	.site-name:hover {
+		color: #1e90ff;
+	}
+	
+	
+	
+nav {
+	float: right;
+}
+	nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		padding-right: 20px;
+	}
+	
+		nav ul li {
+			display: inline-block;
+			line-height: 60px;
+		}
+			
+			nav ul li a {
+				display: block;
+				padding: 0 15px;
+				text-decoration: none;
+			}
+			
+				nav ul li a:hover {
+					background: #1e90ff;
+				}
+
+.main-content {
+	background: white;
+	width: 100%;
+}
+
+.content {
+        column-count: 3;
+        column-gap:90px;
+		column-width: 100px;
+        list-style: none;
+		padding: 40px;
+		height: 150px;
+	}
+	span{
+        color: black;
+        font-size: 27px;
+        text-align: center;
+    }
+    .lista1{
+        text-align: center;
+		padding-bottom: 10px;
+    }
+    .lista2{
+        text-align: center;
+    }
+    .lista3{
+        text-align: center;
+    }
+.second-content{
+	background: #1e90ff;
+	height: 300px;
+	padding-top: 20px;
+}
+
+.dedo-arriba{
+	height: 65px;
+		width: 70px;
+		text-align: center;
+		margin: 6px;
+		cursor: pointer;
+}
+
+.computador {
+		height: 65px;
+		width: 70px;
+		text-align: center;
+		margin: 6px;
+		cursor: pointer;
+}
+.cohete {
+	height: 65px;
+		width: 70px;
+		text-align: center;
+		margin: 6px;
+		cursor: pointer;
+}
+
+
+p{
+	padding-top: 50px;
+	color: white;
+	text-align: center;
+	font-size: 40px;
+}
+button {
+	background: white;
+    color: black;
+    cursor: pointer;
+	border: #EEEEEE;
+    margin-left: 925px;
+    height: 40px;
+    width: 100px;
+    font-size:1.1em;
+}
+button:hover {
+	color: black;
+	background: #c7c7c7;
+}
+
+#main-footer {
+	background: #333;
+	color: white;
+	text-align: left;
+	padding: 20px;
+	margin-top: 5px;
+}
+	#main-footer p {
+		margin: 0;
+	}
+	
+	#main-footer a {
+		color: white;
+	}
+	#main-footer a:hover{
+		color: #1e90ff;
+	}
+.footer {
+	font-size: small;
+	text-align: left;
+	
+}
+
+.site-name {
+    margin-left: 200px;
+    margin-top: 5px;
+}
+
+.listas {
+    margin-right: 200px;
+    margin-bottom: 0px;
+	margin-top: 2px;
+
+}
