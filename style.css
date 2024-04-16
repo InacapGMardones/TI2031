@@ -1,0 +1,29 @@
+.fclr1 {
+    color: #ffffff;
+}
+.bgimg1 {
+    background-image: url(https://i.imgur.com/uZWcQAx.png);
+    background-color: #cccccc;
+    backdrop-filter: blur(10px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.font1 .font2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fsize1 {
+    font-size: 50px;
+}
+.fsize2 {
+    font-size: 16px;
+}
+.fsize3 {
+    font-size: 22px;
+}
+.fsize4 {
+    font-size: 26px;
+}
+.fseize5 {
+    font-size: 5px;
+}
