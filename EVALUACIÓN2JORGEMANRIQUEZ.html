@@ -1,0 +1,122 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <style> 
+        /* Estilos para la lista de navegación */ 
+        #navlist { 
+            background-color: black; 
+            color: white; 
+            padding-left: 15%; 
+            list-style: none; 
+            text-align: right; /* Alineamos los elementos a la derecha */ 
+            display: flex; 
+            justify-content: space-between; /* Distribuye los elementos uniformemente a lo largo del contenedor */ 
+            align-items: center; 
+        } 
+        #navlist a { 
+            text-decoration: none; 
+            color: white; 
+        } 
+        /* Estilos para el encabezado principal */ 
+        #encabezado-principal { 
+            background-color: gray; 
+            color: white; 
+            padding: 5%; 
+            text-align: center; 
+        } 
+        /* Estilos para el botón */ 
+        #boton { 
+            background-color: #301af5; 
+            color: white; 
+            padding: 12px 24px; /* Aumentamos el padding para hacer el botón más grande */ 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 5px; /* Añadimos bordes redondeados para un aspecto más moderno */ 
+            transition: background-color 0.3s; /* Agregamos una transición suave al color de fondo */ 
+        } 
+        #boton:hover { 
+            background-color: #555; /* Cambiamos el color de fondo al pasar el ratón */ 
+        } 
+        .metrica { 
+            display: flex; 
+            justify-content: space-around; /* Distribuye los elementos uniformemente a lo largo del contenedor */ 
+            align-items: center; 
+            text-align: center; 
+            margin-top: 1%; /* Agregamos margen superior */ 
+        } 
+        .metrica-item { 
+            flex-basis: 30%; /* Establecemos el ancho deseado para cada métrica */ 
+        } 
+        .imagen { 
+            width: 50px; /* Ajusta el tamaño de la imagen según tus necesidades */ 
+            height: auto; 
+            padding-top: 20px; 
+        } 
+        .nombre { 
+            font-weight: bold; 
+            margin-top: 5px; 
+        } 
+        .descripcion { 
+            margin-top: 5px; 
+        } 
+        #encabezado-secundario { 
+            background-color: rgb(34, 21, 223); 
+            color: white; 
+            padding: 10%; 
+            text-align: center; 
+        } 
+        #registrar { 
+            background-color: white; 
+            color: black; /* Cambiamos el color del texto a negro */ 
+            padding: 12px 24px; /* Aumentamos el padding para hacer el botón más grande */ 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 5px; /* Añadimos bordes redondeados para un aspecto más moderno */ 
+            transition: background-color 0.3s; /* Agregamos una transición suave al color de fondo */ 
+        } 
+        #movderecha{ 
+            padding-right: 10%; 
+            margin: 5px 60px; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <div id="navlist"> 
+        <a href="#">Plataforma</a> 
+        <div id="movderecha"> 
+            <a href="#">Inicio</a> 
+            <a href="#">Acerca</a> 
+            <a href="#">Servicios</a> 
+            <a href="#">Contacto</a> 
+        </div> 
+    </div> 
+    <div id="encabezado-principal"> 
+        <h1>Encabezado Principal</h1> 
+        <p>Subtítulo descriptivo</p> 
+        <button id="boton">Boton</button> 
+    </div> 
+    <div class="metrica"> 
+        <div class="metrica-item"> 
+            <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/58319/backhand-index-pointing-right-emoji-clipart-md.png" class="imagen"> 
+            <p class="nombre">Métrica 1</p> 
+            <p class="descripcion">Descripción metrica 1</p> 
+        </div> 
+        <div class="metrica-item"> 
+            <img src="https://th.bing.com/th/id/OIP.dPA9vZCDBxrAIDQ6gr1wyAHaHa?rs=1&pid=ImgDetMain" class="imagen"> 
+            <p class="nombre">Métrica 2</p> 
+            <p class="descripcion">Descripción metrica 2</p> 
+        </div> 
+        <div class="metrica-item"> 
+            <img src="https://th.bing.com/th/id/OIP.diNtfggaAs3gTfS4cmKOoAHaFi?rs=1&pid=ImgDetMain" class="imagen"> 
+            <p class="nombre">Métrica 3</p> 
+            <p class="descripcion">Descripción metrica 3</p> 
+        </div> 
+    </div> 
+    <div id="encabezado-secundario"> 
+        <h3>Únete a nuestra comunidad hoy mismo</h3> 
+        <button id="registrar">Regístrate</button> 
+    </div> 
+</body> 
+</html> 
