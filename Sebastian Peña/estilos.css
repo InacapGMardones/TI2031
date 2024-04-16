@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo  {
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-content {
+    margin-top: 0px; 
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.overlay h1 {
+    font-size: 2em;
+}
+
+.overlay .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    
+}
+
+.icon i{
+    font-size: 3em;
+}
+
+.icon {
+    text-align: center;
+    ;
+}
+
+.icon h2 {
+    font-size: 1.2em;
+}
+
+.icon p {
+    font-size: 1em;
+}
+
+
+
+
+.image-conta {
+    position: relative;
+    width: 100%;
+}
+
+.image-conta img {
+    width: 100%;
+    height: 200px;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.overlay h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.overlay button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
