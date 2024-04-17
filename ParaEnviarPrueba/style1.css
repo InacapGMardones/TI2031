@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.backnegroP {
+    background-color: black;
+    padding: 0% ;
+}
+
+.Plataformatext{
+font-family: Arial, Helvetica, sans-serif;
+color: white;
+margin-top: 0px;
+padding-left: 50px;
+}
+
+.BackEncabezadoPrincipal {
+    background-color:rgba(175, 172, 168, 0.897);
+    padding: 10%;
+    justify-content: center;
+}
+
+.Numerosdetras {
+    background-color: #f0f0f0; opacity: 0.1;
+    text-align: center;
+        font-weight: 50;
+        color: white;
+}
+
+.Lista1{
+    list-style: none;
+    text-align: right;
+    padding-top: 0%;
+    margin-top: 0px;
+    margin-right: 10px;
+}
+li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-inline-end: 0%;
+    margin-top: 5px;
+
+}
+
+
+.centro
+    {text-align: center;
+    font-weight: 50;
+    color: white;
+}
+
+.contenedorbotones{
+    display: flex;
+    justify-content: center;
+
+}
+
+.buttonBoton{
+    bottom: unset;
+    margin-bottom: 0%;
+    justify-content: center;
+    margin: 1px;
+    background-color: black;
+    color: white;
+    border: none;
+    width:100px;
+}
+.buttonBotonP{
+    bottom: unset;
+    margin-bottom: 0%;
+    justify-content: center;
+    margin: 2px;
+    background-color: black;
+    color: white;
+    border: none;
+    width:1000px;
+    text-align: left;
+}
+
+/*.contenedor1{
+    display: flex;
+    justify-content:center ;
+    column-count: 2;
+}
+*/
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas del mismo tamaño */
+    gap: 10px; /* Espacio entre las columnas */
+    justify-content: center; /* Centra las columnas horizontalmente */
+    padding-left: 0px;
+}
+.column {
+    padding: 2px;
+    background-color: #fffffff5;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+.textoMetricas {
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
+    margin-top: 5px;
+    justify-content: center;
+    text-align: center;
+}
+
+.botonBoton{
+background-color: blue;
+color:white;
+margin:1%;
+padding: 8px;
+border: none;
+}
+
+.BackFinal{
+    background-color: rgb(4, 4, 245);
+    padding: 5%;
+    justify-content: center;
+
+}
+
+.body {
+    background-color: white;
+    padding: 50px;
+}
+
+.textoFinal {
+    text-align: center;
+    font-weight: 20;
+    color: white;
+    font-size: medium; 
+}
+
+.botonRegistrarse{
+    background-color: white;
+    color:black;
+    margin: 10px;
+    padding: 8px;
+    border: none;
+    
+}
+
+
+.textoMetricah1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    margin-top: 0px;
+    text-align:center ;
+}
+
+
+.textoMetricah2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    margin-top: 0px;
+    text-align:center ;
+}
+
+
+
+
+figure {
+        position: relative;
+        text-align: center;
+    }
+    figure:after {
+        content: attr(title);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 6px 12px;
+        position: absolute;
+        top: 30px;
+        left: 110%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.25s ease;
+        white-space: nowrap;
+    }
+    figure:hover:after {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .container {
+        position: relative;
+    }
+    .button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* Estilos adicionales para el botón */
+    }
+
+
