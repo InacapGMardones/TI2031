@@ -1,0 +1,134 @@
+/* #####  Estilos para los botones*/
+.body,
+.button-container {
+  margin: 0; /* Elimina el margen predeterminado del cuerpo */
+  padding: 0; /* Elimina el relleno predeterminado del cuerpo */
+  width: 100%; /* Hace que el cuerpo y el contenedor ocupen todo el ancho de la ventana */
+  background-color: #000;
+}
+.button-container a,
+.button-group a,
+.container {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  font-family: Arial, sans-serif; /* Cambia la fuente del texto */
+  font-weight: bold; /* Agrega negrita al texto */
+}
+.button-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 10px;
+  background-color: #000;
+  align-items: center;
+  padding: 10px;
+}
+.button-l {
+  padding: 10px 20px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  grid-column: 1; /* Ocupa toda la primera columna */
+  margin-left: 100%;
+  margin-left: 200%; /* Margen izquierdo */
+}
+.button-group {
+  display: flex; /* Para que los botones pequeños estén en línea */
+  padding-right: 10%;
+}
+.button-s {
+  padding: 20px 20px; /* Añade relleno interno al botón */
+  font-size: 16px; /* Tamaño de la fuente del botón */
+  color: white; /* Color del texto */
+  background-color: #000; /* Color de fondo del botón */
+  text-align: center;
+}
+/* #####  Estilos para la imagen de fondo y el texto */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+  height: 100%; /* Establecemos el ancho de la textura */
+}
+.background-image {
+  display: flex; /* Convertimos la textura en un flexbox */
+  justify-content: center; /* Centramos horizontalmente los elementos */
+  align-items: center; /* Centramos verticalmente los elementos */
+  background-image: url("https://www.jeffreyscafe.ca/wp-content/uploads/2016/01/banner-placeholder.png");
+  background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
+  width: 100%; /* Establecemos el ancho de la textura */
+  background-color: grey;
+  max-height: 400px;
+}
+.background-image p {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+}
+.button_blue {
+  position: relative; /* Posiciona el botón de forma absoluta dentro del contenedor */
+  top: 50%; /* Alinea el botón verticalmente en el centro */
+  left: 50%; /* Alinea el botón horizontalmente en el centro */
+  transform: translate(-50%, -50%); /* Centra el botón completamente */
+  font-size: 16px;
+  border: 2px solid #000;
+  padding: 10px 20px;
+  background-color: #0088ff;
+  color: white;
+  margin: 20px auto; /* Margen superior y centrado horizontal */
+}
+.header_text {
+  font-size: 45px;
+  color: white;
+  padding: 20px;
+}
+
+.lead {
+  margin: 10px 10px;
+  font-family: Arial, sans-serif;
+}
+
+/* #####  Estilos para las tarjetas */
+
+.column {
+  position: sticky; /* Posiciona el botón de forma absoluta dentro del contenedor */
+  display: flex;
+  justify-content: space-between; /* Distribuye las tarjetas horizontalmente */
+  position: relative; /* Añadimos posición relativa para contener los elementos */
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.card {
+  position: sticky; /* Posiciona el botón de forma absoluta dentro del contenedor */
+  flex: 2;
+  margin: 0 20px;
+  text-align: center;
+}
+
+/* #####  Estilos inferior */
+
+.foot {
+  display: flex; /* Convertimos el contenedor en un flexbox */
+  justify-content: center; /* Centramos horizontalmente los elementos */
+  background-color: #0088ff;
+  width: 100%;
+  padding: 5%;
+}
+.header {
+  font-size: 38px; /* Tamaño de la fuente del botón */
+  padding: 10px 10px; /* Ajuste del relleno interno del botón */
+  color: white;
+}
+.button_reg {
+  /* boton registro */
+  position: relative; /* Posiciona el botón de forma absoluta dentro del contenedor */
+  top: 50%; /* Alinea el botón verticalmente en el centro */
+  left: 50%; /* Alinea el botón horizontalmente en el centro */
+  transform: translate(-50%, -50%); /* Centra el botón completamente */
+  font-size: 16px; /* Tamaño de la fuente del botón */
+  padding: 10px 20px; /* Ajuste del relleno interno del botón */
+  margin: 10;
+  background-color: white;
+  color: black;
+}
