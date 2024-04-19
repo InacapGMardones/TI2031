@@ -1,0 +1,212 @@
+HTML
+<!DOCTYPE html>
+<html lang ="es">
+  <head>
+    <meta charset="uft-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body class="cuerpo">
+        <div class="contenedor">
+            <div class="boton_contenedor">
+                <a href="url_de_plataforma" class="boton_uno" title="Ir a la plataforma">Plataforma</a>
+            </div>            
+            <div class="grupo_de_botones">
+                <a href="url_de_inicio" class="botones" title="Ir a inicio">Inicio</a>
+                <a href="url_de_acerca" class="botones" title="Ir a acerca">Acerca</a>
+                <a href="url_de_servicio" class="botones" title="Ir a Servicio">Servicio</a>
+                <a href="url_de_contacto" class="botones" title="Ir a Contacto">Contacto</a>
+            </div>
+        </div>
+    <div class="contenedor">
+        <div class="imagen_de_atras">
+            <div class="contenido">
+                <h1 class="encabezado">Encabezado Principal</h1>
+                <p class="dream">Subtitulo Descriptivo</p>
+                <div class="center">
+                    <button class="boton_azul">Boton</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="contenedor">
+        <div class="columna">
+            <div class="emojis">
+
+                <h1 class="cabeza">👉🏽</h1>
+                <h2>Metrica 1</h2>
+                <p>Descripcion metrica 1</p>
+            </div>
+            <div class="emojis">
+                <h1 class="cabeza">🖥️</h1>
+                <h2>Metrica 2</h2>
+                <p>Descripcion metrica 2</p>
+            </div>
+            <div class="emojis">
+                <h1 class="cabeza">🛸</h1>
+                <h2>Metrica 3</h2>
+                <p>Descripcion metrica 3</p>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor">
+        <div class="abajo">
+            <div class="row">
+                <h2 class="cabeza">Únete a nuestra comunidad hoy mismo</h2>
+                <div class="center">
+                    <button class="boton_">Registrate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+css
+.cuerpo,
+.boton_contenedor {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #000;
+}
+
+.boton_contenedor a,
+.grupo_De_botones a,
+.contenedor {
+  text-decoration: none;
+  font-family: Comic Sans MS, sans-serif;
+  font-weight: bold;
+}
+
+.boton_contenedor {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 10px;
+  background-color: #000;
+  align-items: center;
+  padding: 10px;
+}
+
+.boton_uno {
+  padding: 10px 20px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  grid-column: 1;
+  margin-left: 100%;
+  margin-left: 200%;
+}
+
+.grupo_De_botones {
+  display: flex;
+  padding-right: 10%;
+}
+
+.botones {
+  padding: 20px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+  height: 100%;
+}
+
+.imagen_de_atras {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://www.doghouseantiques.co.uk/wp-content/uploads/2015/10/text-3.png");
+  background-size: cover;
+  width: 100%;
+  background-color: grey;
+  max-height: 400px;
+}
+
+.imagen_de_atras p {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+}
+
+.boton_azul {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  border: 2px solid #000;
+  padding: 10px 20px;
+  background-color: #0088ff;
+  color: white;
+  margin: 20px auto;
+}
+
+.encabezado {
+  font-size: 45px;
+  color: white;
+  padding: 20px;
+}
+
+.dream {
+  margin: 4px 4px;
+  font-family: Arial, sans-serif;
+}
+
+.columna {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.emojis {
+  position: sticky;
+  flex: 2;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.abajo {
+  display: flex;
+  justify-content: center;
+  background-color: #0088ff;
+  width: 100%;
+  padding: 5%;
+}
+
+.cabeza {
+  font-size: 38px;
+  padding: 10px 10px;
+  color: white;
+}
+
+.boton_ {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10;
+  background-color: white;
+  color: black;
+}
