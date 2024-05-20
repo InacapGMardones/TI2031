@@ -1,29 +1,29 @@
-.fclr1 {
-    color: #ffffff;
+.container{
+    text-align: center;
 }
-.bgimg1 {
-    background-image: url(https://i.imgur.com/uZWcQAx.png);
-    background-color: #cccccc;
-    backdrop-filter: blur(10px);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+.centrar-inputs{ 
+    text-align: center; 
 }
-.font1 .font2{
-    font-family: Arial, Helvetica, sans-serif;
+.margen {
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
-.fsize1 {
-    font-size: 50px;
+
+.metrica {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
 }
-.fsize2 {
-    font-size: 16px;
+
+.historial{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
 }
-.fsize3 {
-    font-size: 22px;
-}
-.fsize4 {
-    font-size: 26px;
-}
-.fseize5 {
-    font-size: 5px;
+
+.boton-registrar {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
 }
