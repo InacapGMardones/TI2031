@@ -1,0 +1,48 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>DESAFIO 3</title>  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="STYLEDESAFIO3.css">
+</head>  
+<body>  
+  <div class="container">  
+    <h1 class="centrar">Sistema de Gestión de Ventas</h1>  
+    <form id="salesForm">  
+      <div class="form-row"> 
+        <div class="form-group col-md-6"> 
+          <input type="text" class="form-control" id="firstName" placeholder="Nombre" required>  
+        </div> 
+        <div class="form-group col-md-6"> 
+          <input type="text" class="form-control" id="lastName" placeholder="Apellido" required>  
+        </div> 
+      </div> 
+      <div class="form-group"> 
+        <input type="text" class="form-control" id="rut" placeholder="RUT (use puntos y guion)" pattern="[0-99]{2}\.[0-999]{3}\.[0-999]{3}-[0-9kK]{1}" required>  
+      </div> 
+      <div class="form-group"> 
+        <input type="text" class="form-control" id="productName" placeholder="Nombre del producto" required>  
+      </div> 
+      <div class="form-row"> 
+        <div class="form-group col-md-4"> 
+          <input type="number" class="form-control" id="quantity" placeholder="Cantidad" min="1" max="99" required>  
+        </div> 
+        <div class="form-group col-md-4"> 
+          <input type="text" class="form-control" id="productCode" placeholder="Código del producto" required>  
+        </div> 
+        <div class="form-group col-md-4"> 
+          <input type="number" class="form-control" id="productValue" placeholder="Valor del producto" min="0.01" step="0.01" required>  
+        </div> 
+      </div> 
+      <div class="boton-registrar">
+        <input type="submit" class="btn btn-primary" value="Registrar Venta">  
+      </div>
+    </form>  
+    <div id="salesList"></div>
+    <div id="metricaList"></div> 
+    </div> 
+  <script src="SCRIPTDESAFIO3.js"></script>  
+</body>  
+</html> 
