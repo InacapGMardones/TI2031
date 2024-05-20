@@ -1,0 +1,35 @@
+.centrar{ 
+    margin-top: 5%;
+    text-align: center; 
+    margin-bottom: 5%;
+}
+
+.container{
+    text-align: center;
+}
+
+.centrar-inputs{ 
+    text-align: center; 
+}
+.margen {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.metrica {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.historial{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.boton-registrar {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
