@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Ventas - Sistema de Gestión de Ventas</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+<nav class="gestion-ventas-navbar navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="gestion-ventas-brand navbar-brand" href="inicio.html">Gestión de Ventas</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="inicio.html">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ventas.html">Ventas Registradas</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="gestion-ventas-container mt-5">
+  <h2 class="gestion-ventas-title">Registro de Venta</h2>
+  <form id="registroForm">
+    <div class="form-group gestion-ventas-form-group">
+      <label class="gestion-ventas-label" for="nombre">Nombre:</label>
+      <input type="text" class="form-control gestion-ventas-input" id="nombre" required>
+    </div>
+    <div class="form-group gestion-ventas-form-group">
+      <label class="gestion-ventas-label" for="apellido">Apellido:</label>
+      <input type="text" class="form-control gestion-ventas-input" id="apellido" required>
+    </div>
+    <div class="form-group gestion-ventas-form-group">
+      <label class="gestion-ventas-label" for="rut">RUT:</label>
+      <input type="text" class="form-control gestion-ventas-input" id="rut" required>
+    </div>
+    <div class="form-group gestion-ventas-form-group">
+      <label class="gestion-ventas-label" for="producto">Nombre Producto:</label>
+      <input type="text" class="form-control gestion-ventas-input" id="producto" required>
+    </div>
+    <div class="form-group gestion-ventas-form-group">
+      <label class="gestion-ventas-label" for="cantidad">Cantidad:</label>
+      <input type="number" class="form-control gestion-ventas-input" id="cantidad" required min="1" max="99" oninput="calcularTotal()">
+    </div>
+    <div class="form-group gestion-ventas-form-group">
+      <label class="gestion-ventas-label" for="codigo">Código Producto:</label>
+      <input type="text" class="form-control gestion-ventas-input" id="codigo" required>
+    </div>
+    <div class="form-group gestion-ventas-form-group">
+      <label class="gestion-ventas-label" for="valor">Valor Producto:</label>
+      <input type="number" class="form-control gestion-ventas-input" id="valor" required min="1" oninput="calcularTotal()">
+    </div>
+    <div class="form-group gestion-ventas-form-group">
+      <label class="gestion-ventas-label" for="total">Total:</label>
+      <input type="text" class="form-control gestion-ventas-input" id="total" readonly>
+    </div>
+    <button type="submit" class="btn gestion-ventas-btn-primary">Registrar Venta</button>
+  </form>
+</div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

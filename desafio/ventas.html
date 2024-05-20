@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ventas Registradas - Sistema de Gestión de Ventas</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="gestion-ventas-navbar navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="gestion-ventas-brand navbar-brand" href="inicio.html">Gestión de Ventas</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="gestion-ventas-nav-item nav-item">
+          <a class="gestion-ventas-nav-link nav-link" href="inicio.html">Inicio</a>
+        </li>
+        <li class="gestion-ventas-nav-item nav-item">
+          <a class="gestion-ventas-nav-link nav-link" href="registro.html">Registrar Venta</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid mt-5">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <h2 class="card-header gestion-ventas-title">Ventas Registradas</h2>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="gestion-ventas-table table table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>ID</th>
+                    <th>Nombre Cliente</th>
+                    <th>RUT</th>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Código Producto</th>
+                    <th>Valor Unitario</th>
+                    <th>Valor Total</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="ventasBody">
+                 
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="gestion-ventas-modal modal fade" id="modalModificarVenta" tabindex="-1" role="dialog" aria-labelledby="modalModificarVentaLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalModificarVentaLabel">Modificar Venta</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         
+          <form id="formularioModificarVenta">
+            <div class="form-group">
+              <label for="nombreModificado">Nombre:</label>
+              <input type="text" class="form-control" id="nombreModificado" required>
+            </div>
+            <div class="form-group">
+              <label for="apellidoModificado">Apellido:</label>
+              <input type="text" class="form-control" id="apellidoModificado" required>
+            </div>
+            <div class="form-group">
+              <label for="rutModificado">RUT:</label>
+              <input type="text" class="form-control" id="rutModificado" required>
+            </div>
+            <div class="form-group">
+              <label for="productoModificado">Nombre Producto:</label>
+              <input type="text" class="form-control" id="productoModificado" required>
+            </div>
+            <div class="form-group">
+              <label for="cantidadModificada">Cantidad:</label>
+              <input type="number" class="form-control" id="cantidadModificada" required min="1" max="99">
+            </div>
+            <div class="form-group">
+              <label for="codigoModificado">Código Producto:</label>
+              <input type="text" class="form-control" id="codigoModificado" required>
+            </div>
+            <div class="form-group">
+              <label for="valorModificado">Valor Producto:</label>
+              <input type="number" class="form-control" id="valorModificado" required min="1">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn gestion-ventas-btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn gestion-ventas-btn-primary" id="guardarModificacion">Guardar Cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+
+  <script src="script.js"></script>
+  <script>
+    
+    mostrarVentas();
+  </script>
+</body>
+</html>
