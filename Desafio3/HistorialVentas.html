@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Historial Ventas</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="Desafiopt1.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div 
+            class="formtitulo"><h1>Gestion de Ventas</h1>
+        </div>
+            <ul class="nav nav-pills mb-3">
+                <li class="nav-item"><a href="Desafiopt1.html" class="nav-link">Registrar Venta</a></li>
+                <li class="nav-item"><a href="HistorialVentas.html" class="nav-link active">Historial Ventas</a></li>
+                <li class="nav-item"><a href="MetricasV.html" class="nav-link">Métricas de venta</a></li>
+            </ul>    
+    </header>  
+        
+
+     <!--Anclar a historial-->
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre Cliente</th>
+                <th>Apellido</th>
+                <th>Valor Total</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modificar Venta</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="nombre">Nombre Producto:</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Ingresa Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Codigo">Codigo Producto:</label>
+                        <input type="text" class="form-control" id="Codigo" placeholder="Ingresa Codigo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Cantidad">Cantidad Producto:</label>
+                        <input type="number" class="form-control" id="Cantidad" min="0" max="99" placeholder="Ingresa Cantidad" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Valor">Valor Producto:</label>
+                        <input type="number" class="form-control" id="Valor" min="0.00" step="any" placeholder="Ingresa Valor" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" id="GuardarCambios" class="btn btn-primary">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="Desafiopt1.js"></script>
+
+</body>
+</html>

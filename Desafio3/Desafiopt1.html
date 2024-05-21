@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Desafiopt1.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>VentasJuanito</title>
+</head>
+<body class="backgroundtotal">
+<header>
+    <div 
+        class="formtitulo"><h1>Gestion de Ventas</h1>
+    </div>
+        <ul class="nav nav-pills mb-3">
+            <li class="nav-item"><a href="Desafiopt1.html" class="nav-link active">Registrar Venta</a></li>
+            <li class="nav-item"><a href="HistorialVentas.html" class="nav-link">Historial Ventas</a></li>
+            <li class="nav-item"><a href="MetricasV.html" class="nav-link">Métricas de venta</a></li>
+        </ul>    
+</header>  
+    
+<div class="FormForm">
+    <form id="miFormulario" class="form-register" >
+        <label for="nombre">Nombre:</label>
+        <input class="inputscontrol" type="text" name="nombre" id="nombre" placeholder="Ingresa Nombre" tittle=" Nombre Cliente" required>
+        <br>
+        <label for="apellido">Apellido:</label>
+        <input class="inputscontrol" type="text" name="apellido" id="apellido" placeholder="Ingresa Apellido" title="Apellido Cliente" required>
+        <br>
+        <label for="rut">Rut:</label>
+        <input class="inputscontrol" type="text" name="rut" id="rut" placeholder="Ingresa RUT" title="Rut Cliente" required>
+        <br>
+        <label for="nombreProducto">Nombre Producto:</label>
+        <input class="inputscontrol" type="text" name="nombreProducto" id="nombreProducto" placeholder="Ingrese Nombre Producto" tittle="Nombre Producto" required>
+        <br>
+        <label for="cantidadProducto">Cantidad Producto:</label>
+        <input class="inputscontrol" type="number" name="cantidadProducto" id="cantidadProducto" min="0" max="99" placeholder="Ingrese Cantidad Producto" title="Cantidad Producto" required>
+        <br>
+        <label for="codigoProducto">Codigo Producto:</label>
+        <input class="inputscontrol" type="text" name="codigoProducto" id="codigoProducto" placeholder="Ingrese Codigo Producto" title="Codigo Producto" required>
+        <br>
+        <label for="valorProducto">Valor Producto:</label>
+        <input class="inputscontrol" type="number" name="valorProducto" id="valorProducto" min="1" step="any" placeholder="Ingrese Valor Producto" tittle="Valor Producto" required>
+        <br>
+        <div>
+            <label for="valorTotal">Valor Total:</label>
+            <output class="inputscontrol2" type="number" name="valorTotal" id="valorTotal" min="0.00"  title="Valor TRotal" required></output>  
+        </div>
+        <br>
+            <input class="inputscontrol3" type="submit" value="Guardar" id="Guardar">
+   
+    </form>
+</div>
+<div id="resultados" class="bckregistro">
+        <h3 id="FormularioEnviado">Registro de Datos</h3>
+        <p id="MensajeEnviado"></p>
+</div>
+
+
+
+    
+
+
+<script src="Desafiopt1.js"></script>
+
+</body>
+</html>
+
+
+<!--Sistema gestion de ventas 
+-Registrar Ventas (Nombre cliente, productos comprados, cantidad y monto total). 
+-Visualizar todas las ventas 
+-Modificar o eliminar ventas 
+Requerimientos: 
+Métricas de ventas: El sistema debe mostrar la cantidad de ventas realizadas durante un día, ventas totales, ganancias del día y ganancias totales, las cuales deben actualizarse al momento de registrar una venta nueva.  
+Formulario de registro de ventas: Debe considerar los siguientes inputs: Nombre, Apellido, RUT, Nombre producto, Cantidad de productos, Código producto, Valor de producto y valor total. Al guardar el registro debe mostrar un mensaje de venta registrada.  
+Visualización de ventas registradas: Dentro de la página debe mostrar un listado con las ultimas 20 compras registradas, en donde se vean los siguientes datos (ID, Nombre cliente, valor total, Botón modificar y Botón Eliminar), ademas debe actualizarse al momento de registrar una nueva venta. 
+Reglas 
+Validación de precio: Los precios deben ser positivos  
+Validación de cantidad: La cantidad debe ser positiva y menor a 100  -->

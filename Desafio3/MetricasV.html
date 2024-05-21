@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métricas de Venta</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="Desafiopt1.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div 
+            class="formtitulo"><h1>Gestion de Ventas</h1>
+        </div>
+            <ul class="nav nav-pills mb-3">
+                <li class="nav-item"><a href="Desafiopt1.html" class="nav-link">Registrar Venta</a></li>
+                <li class="nav-item"><a href="HistorialVentas.html" class="nav-link">Historial Ventas</a></li>
+                <li class="nav-item"><a href="MetricasV.html" class="nav-link active">Métricas de venta</a></li>
+            </ul>    
+    </header>  
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ventas Totales Hoy</h5>
+                        <p id="ventasDia" class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ganancia Total Hoy</h5>
+                        <p id="gananciaDia" class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ventas Totales</h5>
+                        <p id="ventasTotales" class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ganancia Total</h5>
+                        <p id="gananciaTotales" class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="Desafiopt1.js"></script>
+</body>
+</html>

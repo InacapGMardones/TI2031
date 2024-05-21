@@ -1,0 +1,132 @@
+/* Sistema gestion de ventas 
+-Registrar Ventas (Nombre cliente, productos comprados, cantidad y monto total). 
+-Visualizar todas las ventas 
+-Modificar o eliminar ventas 
+Requerimientos: 
+Métricas de ventas: El sistema debe mostrar la cantidad de ventas realizadas durante un día, ventas totales, ganancias del día y ganancias totales, las cuales deben actualizarse al momento de registrar una venta nueva.  
+Formulario de registro de ventas: Debe considerar los siguientes inputs: Nombre, Apellido, RUT, Nombre producto, Cantidad de productos, Código producto, Valor de producto y valor total. Al guardar el registro debe mostrar un mensaje de venta registrada.  
+Visualización de ventas registradas: Dentro de la página debe mostrar un listado con las ultimas 20 compras registradas, en donde se vean los siguientes datos (ID, Nombre cliente, valor total, Botón modificar y Botón Eliminar), ademas debe actualizarse al momento de registrar una nueva venta. 
+Reglas 
+Validación de precio: Los precios deben ser positivos  
+Validación de cantidad: La cantidad debe ser positiva y menor a 100 */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+form {
+    background-color: rgb(252, 228, 228);
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 10px;
+}
+
+
+.registroDato {
+    display: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-register{
+    width: 800px;
+    background: #232425;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color:white ;
+}
+
+.formtitulo{
+    text-align: center;
+    background-color: #f0f0f0;
+    border: 3px solid black;
+    padding: 4px;
+    }
+
+
+.bckregistro{
+    width: 800px;
+    text-align: center;
+    background-color: #232425;
+    padding: 30px;
+    border-radius: 4px;
+    margin-bottom: 100px;
+    margin: auto;
+    font-family: 'calibri';
+    color:white ;
+    
+    
+}
+
+/* En construccion  .backgroundtotal{
+    background-color: #002c74;
+    margin: 0;
+    padding: 0;
+}
+*/
+
+.inputscontrol{
+    width: 100%;
+    background-color: #f1f3f5;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+
+}
+
+.inputscontrol2{
+    width: 100%;
+    background-color: #f1f3f5;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: black;
+
+}
+
+.inputscontrol3{
+    width: 100%;
+    background-color: #0b48f0;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: black;
+
+}
+
+.moverlista{
+    text-align: left;
+}
+
+header{
+    background-color: #f2f2f3;
+    color: rgb(12, 12, 12);
+    padding: 10px;
+    text-align: center;
+    font-family: 'calibri';
+    border : 3px solid black;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Formulario Enviado</title>
+</head>
+<body>
+  <h2>Formulario de Contacto</h2>
+  <form id="miFormulario">
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre">
+    </div>
+    <div>
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email">
+    </div>
+    <div>
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje"></textarea>
+    </div>
+    <div>
+      <button type="submit">Enviar</button>
+    </div>
+  </form>
+
+  <div id="resultados" style="display:none;">
+    <h3>Datos Enviados:</h3>
+    <p id="resultadoNombre"></p>
+    <p id="resultadoEmail"></p>
+    <p id="resultadoMensaje"></p>
+  </div>
+
+  <script>
+    document.getElementById('miFormulario').onsubmit = function(e) {
+      e.preventDefault();
+      var nombre = document.getElementById('nombre').value;
+      var email = document.getElementById('email').value;
+      var mensaje = document.getElementById('mensaje').value;
+
+      document.getElementById('resultadoNombre').innerText = 'Nombre: ' + nombre;
+      document.getElementById('resultadoEmail').innerText = 'Correo electrónico: ' + email;
+      document.getElementById('resultadoMensaje').innerText = 'Mensaje: ' + mensaje;
+
+      document.getElementById('resultados').style.display = 'block';
+    };
+  </script>
+</body>
+</html>
