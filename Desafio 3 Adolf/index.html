@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Ventas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body center style="background-color: #f0f8ff;" >
+    <header class="dash">
+        <title id="title"> Menu </title>
+        <nav id="nav" class="navbar navbar-light" style="background-color: #022b4e;">
+            <ul class="nav nav-pills nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Formulario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="metrics.html">Métricas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="record.html">Historial</a>
+                </li>
+            </ul>
+    </header>
+<br>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="text-center">Registro de Producto</h2>
+                <hr>
+                <form id="form">
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="name">Nombre de Cliente:</label>
+                            <input type="text" id="name" name="name" class="form-control mb-2" placeholder="Ingrese el Nombre"required>
+                        </div>
+                        <div class="col">
+                            <label for="lastname">Apellido de Cliente:</label>
+                                    <input type="text" id="lastname" name="last_name" class="form-control mb-2" placeholder="Ingrese el Apellido" required>
+                                </div>
+                                <div class="col">
+                                    <label for="dni">RUT de Cliente:</label>
+                                    <input type="text" id="dni" name="dni" class="form-control mb-2" placeholder="Ingrese el RUT" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="productName">Nombre Producto:</label>
+                                    <input required type="text" id="productName" name="productName" class="form-control mb-3" placeholder="Ingrese el nombre del Producto" required>
+                                </div>
+                                <div class="col">
+                                    <label for="productCode">Código Producto:</label>
+                                    <input required type="text" id="productCode" name="productCode" class="form-control mb-3" placeholder="Ingrese el Código del Producto"required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="productQuantity">Cantidad Producto:</label>
+                            <input required type="number" id="productQuantity" name="productQuantity" class="form-control mb-4" placeholder="Ingrese la cantidad del Producto" min="0" max="99" required>
+                        </div>
+                        <div class="col">
+                            <label for="productPrice">Valor Producto:</label>
+                            <input required type="number" id="productPrice" name="productPrice" class="form-control mb-4" placeholder="Ingrese el Precio del Producto" min="0" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="totalProduct">Total Producto:</label>
+                            <output type="number" id="totalProduct" name="totalProduct" class="form-control mb-4" placeholder="Total del Producto">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <button id="btnSend" type="submit" class="btn btn-primary mb-5">Enviar</button>
+                        </div>
+                    </div>
+                </form>            
+                <div class="container"></div>
+                    <div id="carProduct" class="card" style="display: none;">
+                        <div class="card-body">
+                            <h2 id="titleMessage" class="card-title">Producto Registrado</h2>
+                            <p id="message"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script></body>
+</html>
