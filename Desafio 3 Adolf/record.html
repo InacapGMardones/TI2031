@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Ventas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body center style="background-color: #f0f8ff;">
+    <header class="dash">
+        <title id="title"> Menu </title>
+        <nav id="nav" class="navbar navbar-light" style="background-color: #022b4e;">
+            <ul class="nav nav-pills nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Formulario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="metrics.html">Metricas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active"href="record.html">Historial</a>
+                </li>
+            </ul>
+    </header>
+    <br>
+    <h2 class="text-center">Historial de Productos Vendidos</h2>
+    <div class="container">
+        <table id="recordTable" class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre de Cliente</th>
+                    <th scope="col">Apellido de Cliente</th>
+                    <th scope="col">RUT de Cliente</th>
+                    <th scope="col">Nombre Producto v</th>
+                    <th scope="col">Cantidad Producto</th>
+                    <th scope="col">Código Producto</th>
+                    <th scope="col">Valor Producto</th>
+                    <th scope="col">Total Producto</th>
+                    <th scope="col">Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <button id="clear" class="btn btn-primary">Limpiar Historial</button>
+        <button id="borrarTodo" class="btn btn-secondary">Borrado Irreversible</button>
+        <button id="export" class="btn btn-success">Exportar a Json</button>
+    </div>
+    <div class="modal" id="editModal" tabindex="-1" role="dialog" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Producto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editFormModal">
+                        <div class="form-row">
+                            <div class="col-auto">
+                                <label for="editProductNameModal">Nombre Producto:</label>
+                                <input type="text" id="editProductNameModal" name="editProductNameModal" class="form-control mb-3" placeholder="Ingrese el nombre del Producto">
+                            </div>
+                            <div class="col-auto">
+                                <label for="editProductCodeModal">Codigo Producto:</label>
+                                <input type="text" id="editProductCodeModal" name="editProductCodeModal" class="form-control mb-3" placeholder="Ingrese el Codigo del Producto">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-auto">
+                                <label for="editProductQuantityModal">Cantidad Producto:</label>
+                                <input type="number" id="editProductQuantityModal" name="editProductQuantityModal" class="form-control mb-4" placeholder="Ingrese la cantidad del Producto" min="0" max="99">
+                            </div>
+                            <div class="col-auto">
+                                <label for="editProductPriceModal">Valor Producto:</label>
+                                <input type="number" id="editProductPriceModal" name="editProductPriceModal" class="form-control mb-4" placeholder="Ingrese el Precio del Producto" min="0">
+                            </div>
+                        </div>
+                        <button type="btnUpdate" id="btnUpdate" class="btn btn-primary">Actualizar</button>
+                        <button type="btnCancel" id="btnCancel" class="btn btn-secondary">Cancelar</button> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</body>
+</html>
