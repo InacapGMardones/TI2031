@@ -3,82 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Calculadora con Historial</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="index.js" defer></script>
 </head>
 <body>
-    <div class="container-fluid bg-dark p-2">
-        <div class="row fclr1">
-            <div class="col-2">
-            </div>
-            <div class="col-5 mt-2" style="font-weight: bold;">
-                Plataforma
-            </div>
-            <div class="col-md-auto">
-            </div>
-            <div class="col-md-auto">
-            </div>
-            <div class="col-md-4 ml-4">
-                <button type="button" class="btn btn-dark" style="font-size: 14px; width: auto;">Inicio</button>
-                <button type="acerca" class="btn btn-dark" style="font-size: 14px; width: auto;">Acerca</button>
-                <button type="button" class="btn btn-dark" style="font-size: 14px; width: auto;">Servicios</button>
-                <button type="button" class="btn btn-dark" style="font-size: 14px; width: auto;">Contacto</button>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid bgimg1 text-center p-5">
-        <div class="row p-5">
-            <div class="col p-3 mt-2 mb-2">
-                <p class="fclr1 font1 fsize1">Encabezado Principal</p>
-                <p class="fclr1 font2 fsize2">Subtitulo descriptivo.</p>
-                <button type="button" class="btn btn-primary">Boton</button>
-            </div>
-        </div>
-    </div>
-    <div class="container p-3">
-        <div class="row justify-content-md-center text-center">
-            <div class="col col-lg-2">
-                <p style="font-size: 40px;">&#128073;</p>
-            </div>
-            <div class="col-4">
-                <p style="font-size: 40px;">&#128187;</p>
-            </div>
-            <div class="col col-lg-2">
-                <p style="font-size: 40px;">&#128640;</p>
-            </div>
-        </div>
-        <div class="row justify-content-md-center text-center fsize3">
-            <div class="col col-lg-2">
-                <p>Metrica 1</p>
-            </div>
-            <div class="col-4">
-                <p>Metrica 2</p>
-            </div>
-            <div class="col col-lg-2">
-                <p>Metrica 3</p>
-            </div>
-        </div>
-        <div class="row justify-content-md-center text-center">
-            <div class="col col-lg-2">
-                <p>Descripción metrica 1.</p>
-            </div>
-            <div class="col-4">
-                <p>Descripción metrica 2.</p>
-            </div>
-            <div class="col col-lg-2">
-                <p>Descripción metrica 3.</p>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid p-4 bg-primary text-center">
-        <div class="row p-5">
-            <div class="col">
-                <p class="fclr1 fsize4">Únete a nuestra comunidad hoy mismo</p>
-                <button type="button" class="btn btn-light">Regístrate</button>
-            </div>
-        </div>
-    </div>
+    <main>
 
+        <div id="calculator">
+
+            <p id="calculatorCalculScreen">&emsp;</p>
+
+            <label>
+                <h2 class="sr-only">Pantalla</h2>
+                <input type="text" inputmode="numeric" value="0" id="calculatorNumber" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+            </label>
+
+            <div>
+                <button type="button" class="calculator-button memory-button" onclick="clearMemory();">MC</button>
+                <button type="button" class="calculator-button memory-button" onclick="readMemory();">MR</button>
+                <button type="button" class="calculator-button memory-button" onclick="saveToMemory();">MS</button>
+                <button type="button" class="calculator-button memory-button" onclick="addToMemory();">M+</button>
+                <button type="button" class="calculator-button memory-button" onclick="subtractFromMemory();">M-</button>
+            </div>
+
+            <div id="calculatorButtons">
+
+
+                <button type="button" class="calculator-button" onclick="operationInstant('%');">%</button>
+                <button type="button" class="calculator-button span-2" onclick="operationInstant('pi');">&pi;</button>
+                <button type="button" class="calculator-button" onclick="clearAll();">AC</button>
+                <button type="button" class="calculator-button" onclick="delLastNumber();"><i class="fa-solid fa-delete-left"></i></button>
+
+                <button type="button" class="calculator-button" onclick="operationInstant('1/x');">1/x</button>
+                <button type="button" class="calculator-button" onclick="operationInstant('x2');">x&sup2;</button>
+                <button type="button" class="calculator-button" onclick="operationInstant('2/x');">&#x221A;x</button>
+                <button type="button" class="calculator-button" onclick="operation('/', this);">&divide;</button>
+
+                <button type="button" class="calculator-button calculator-number" onclick="addNumber(7);">7</button>
+                <button type="button" class="calculator-button calculator-number" onclick="addNumber(8);">8</button>
+                <button type="button" class="calculator-button calculator-number" onclick="addNumber(9);">9</button>
+                <button type="button" class="calculator-button" onclick="operation('x', this);">&times;</button>
+
+                <button type="button" class="calculator-button calculator-number" onclick="addNumber(4);">4</button>
+                <button type="button" class="calculator-button calculator-number" onclick="addNumber(5);">5</button>
+                <button type="button" class="calculator-button calculator-number" onclick="addNumber(6);">6</button>
+                <button type="button" class="calculator-button" onclick="operation('-', this);">&minus;</button>
+
+                <button type="button" class="calculator-button calculator-number" onclick="addNumber(1);">1</button>
+                <button type="button" class="calculator-button calculator-number" onclick="addNumber(2);">2</button>
+                <button type="button" class="calculator-button calculator-number" onclick="addNumber(3);">3</button>
+                <button type="button" class="calculator-button" onclick="operation('+', this);">+</button>
+
+                <button type="button" class="calculator-button calculator-number" onclick="opInverse();">&plusmn;</button>
+                <button type="button" class="calculator-button calculator-number" onclick="addNumber(0);">0</button>
+                <button type="button" class="calculator-button calculator-number" onclick="addNumber('.');">,</button>
+                <button type="button" class="calculator-button calculator-equal" onclick="opEqual();">=</button>
+            </div>
+        </div>
+ 
+        <div class="historial" id="history">
+            <h3>Historial <i class="fa fa-history" title="últimos 10 registros"></i></h3>
+            <dt id="historyList"></dt>
+        </div>
+    </main>
 </body>
 </html>
