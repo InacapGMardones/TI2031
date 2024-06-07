@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Calculadora</title> 
+    <link rel="stylesheet" href="STYLECERTAMEN3.css"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head> 
+<body style="background-color:darkslategray"> 
+    <div class="calculator"> 
+        <input type="button" value="⏳" onclick="abrirhistorial()" style="float: right;">
+        <input type="button" value="🗑️" onclick="borrarhistorial()" style="float: right;"> 
+        <br>
+        <input type="text" id="display" readonly style="text-align: right;">
+        <div id="funcionalidades">  
+            <input type="button" value="MC" onclick="memoryClear()" style="width: 40px; height: 30px; margin: 5px; font-size: 15px; border: 1px solid #110f0f; border-radius: 5px; cursor: pointer; background-color: #110f0f; color: gray;"> 
+            <input type="button" value="MR" onclick="memoryRecall()" style="width: 40px; height: 30px; margin: 5px; font-size: 15px; border: 1px solid #110f0f; border-radius: 5px; cursor: pointer; background-color: #110f0f; color: gray;"> 
+            <input type="button" value="MS" onclick="memoryStore()" style="width: 40px; height: 30px; margin: 5px; font-size: 15px; border: 1px solid #110f0f; border-radius: 5px; cursor: pointer; background-color: #110f0f; color: gray;"> 
+            <input type="button" value="M+" onclick="memoryPlus()" style="width: 40px; height: 30px; margin: 5px; font-size: 15px; border: 1px solid #110f0f; border-radius: 5px; cursor: pointer; background-color: #110f0f; color: gray;"> 
+            <input type="button" value="M-" onclick="memoryMinus()" style="width: 40px; height: 30px; margin: 5px; font-size: 15px; border: 1px solid #110f0f; border-radius: 5px; cursor: pointer; background-color: #110f0f; color: gray;">
+            <input type="button" value="M^" onclick="memoryHistory()" style="width: 40px; height: 30px; margin: 5px; font-size: 15px; border: 1px solid #110f0f; border-radius: 5px; cursor: pointer; background-color: #110f0f; color: gray;">
+            <br> 
+        </div> 
+        <div id="formulas-matematicas">
+            <input type="button" value="%" onclick="porcentaje()"> 
+            <input type="button" value="CE" onclick="clearerror()"> 
+            <input type="button" value="C" onclick="clearDisplay()">
+            <input type="button" value="⌫" onclick="borrar()"> 
+            <br>
+            <input type="button" value="1/x" onclick="transafrac()"> 
+            <input type="button" value="x^2" onclick="exp2()"> 
+            <input type="button" value="raiz" onclick="raizcuadrada()"> 
+            <input type="button" value="/" onclick="addToDisplay('/')">
+            <br>
+        </div> 
+        <div id="calculator-inputs"> 
+            <input type="button" value="7" onclick="addToDisplay('7')"> 
+            <input type="button" value="8" onclick="addToDisplay('8')"> 
+            <input type="button" value="9" onclick="addToDisplay('9')"> 
+            <input type="button" value="*" onclick="addToDisplay('*')"> 
+            <br> 
+            <input type="button" value="4" onclick="addToDisplay('4')"> 
+            <input type="button" value="5" onclick="addToDisplay('5')"> 
+            <input type="button" value="6" onclick="addToDisplay('6')"> 
+            <input type="button" value="-" onclick="addToDisplay('-')"> 
+            <br> 
+            <input type="button" value="1" onclick="addToDisplay('1')"> 
+            <input type="button" value="2" onclick="addToDisplay('2')"> 
+            <input type="button" value="3" onclick="addToDisplay('3')"> 
+            <input type="button" value="+" onclick="addToDisplay('+')"> 
+            <br> 
+            <input type="button" value="+/-" onclick="cambiarsigno()"> 
+            <input type="button" value="0" onclick="addToDisplay('0')"> 
+            <input type="button" value="." onclick="addToDisplay('.')"> 
+            <input type="button" value="=" style="background-color: rgb(223, 97, 97);" onclick="calculate()"> 
+            <br> 
+        </div> 
+    </div> 
+    <script src="SCRIPTCERTAMEN3.js"></script> 
+</body> 
+</html> 
