@@ -1,29 +1,159 @@
-.fclr1 {
-    color: #ffffff;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
-.bgimg1 {
-    background-image: url(https://i.imgur.com/uZWcQAx.png);
-    background-color: #cccccc;
-    backdrop-filter: blur(10px);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+body {
+    height: 100svh;
+    background: rgb(98, 98, 98);
+    background: radial-gradient(circle, rgba(98, 98, 98, 1) 10%, rgba(80, 80, 80, 1) 32%, rgba(0, 0, 0, 1) 100%);
 }
-.font1 .font2{
-    font-family: Arial, Helvetica, sans-serif;
+
+p {
+    max-width: 75ch;
+    text-wrap: pretty;
 }
-.fsize1 {
-    font-size: 50px;
+
+.sr-only {
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
-.fsize2 {
+
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#calculator {
+    font-family: "Segoe UI", Arial, sans-serif;
+    width: 320px;
+    background: #5c5b5b;
+    padding: 4px;
+    padding-top: 16px;
+    border-radius: 9px;
+    box-shadow: 0 0 25px #fff2;
+}
+
+#calculatorButtons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 50px;
+    gap: 2px;
+    margin-top: 16px;
+}
+
+#calculatorButtons button {
+    font-family: "Segoe UI", Arial, sans-serif;
+    border: none;
+    border-radius: 5px;
+    color: #c48a0c;
+    background: #323232;
+    font-size: 20px;
+    transition: background-color 0.3s;
+
+}
+
+#calculatorButtons :is(button:hover, .calculator-number) {
+    background: #3c3c3c;
+
+}
+
+#calculatorButtons .calculator-number:hover {
+    background: #323232;
+
+}
+
+#calculatorButtons .calculator-equal {
+    color: #c48a0c;
+    background: #323232;
+}
+
+#calculatorButtons .calculator-equal:hover {
+    background: #3c3c3c;
+
+}
+
+.memory-button {
+    font-family: "Segoe UI", Arial, sans-serif;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    color: #c48a0c;
+    background: #323232;
+    width: 58.9px;
     font-size: 16px;
+    transition: background-color 0.3s;
+
 }
-.fsize3 {
-    font-size: 22px;
+
+.memory-button:hover {
+    background: #3c3c3c;
+
 }
-.fsize4 {
-    font-size: 26px;
+
+
+#calculator input {
+    font-family: "Segoe UI", Arial, sans-serif;
+    border: none;
+    background: transparent;
+    color: #fff;
+    text-align: right;
+    width: 300px;
+    transform: translateX(5px);
+    font-size: 50px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
-.fseize5 {
-    font-size: 5px;
+
+
+#calculatorCalculScreen {
+    font-size: 14px;
+    color: #a1a1a1;
+    text-align: right;
+    padding-inline: 10px;
+    overflow-x: hidden;
+}
+
+
+.historial {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: white;
+    width: 500px;
+    padding: 4px;
+    padding-left: 20px;
+    border-radius: 9px;
+    margin-top: 16px;
+    font-size: 20px;
+}
+
+
+#toggleHistoryButton {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #c48a0c;
+    background: #323232;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggleHistoryButton:hover {
+    background: #3c3c3c;
 }
