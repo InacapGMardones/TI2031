@@ -1,0 +1,135 @@
+/* Estilos del cuerpo */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #171717;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+/* Estilos del contenedor de la calculadora */
+#calculator {
+    width: 280px;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    background-color: #292929;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos del display */
+#display {
+    width: 100%;
+    height: 70px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    text-align: right;
+    font-size: 1.4em;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #383838;
+    overflow: hidden;
+    word-wrap: break-word;
+    color: #0cffa0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efecto hover en display */
+#display:hover {
+    background-color: #303030;
+    color: #00e676;
+}
+
+/* Estilos del contenedor del botón de historial */
+.history-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+/* Estilos del botón de historial */
+#history-btn {
+    background-color: #0cffa0;
+    border: 2px solid #0cffa0;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#history-btn:hover {
+    background-color: #00e676;
+    border-color: #00e676;
+}
+
+/* Estilos del icono de historial */
+.history-icon {
+    width: 25px;
+    height: 25px;
+}
+
+/* Estilos del panel de historial */
+#history {
+    width: 100%;
+    max-height: 150px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow-y: auto;
+    font-size: 1em;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #383838;
+    color: #0cffa0;
+    display: none;
+}
+
+#history.show {
+    display: block;
+}
+
+/* Clase oculta */
+.hidden {
+    display: none;
+}
+
+/* Estilos de la rejilla de botones */
+.buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+/* Estilos de botones individuales */
+.button {
+    width: 100%;
+    height: 55px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #0cffa0;
+    font-size: 1.2em;
+    color: #171717;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.button:hover {
+    background-color: #00e676;
+}
+
+.button:active {
+    background-color: #00b248;
+    transform: scale(0.95);
+}

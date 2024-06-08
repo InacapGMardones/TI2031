@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="calculator">
+        <div class="history-btn-container">
+            <button class="button" id="history-btn" onclick="toggleHistory()">
+                <img src="historial.png" alt="Historial" class="history-icon">
+            </button>
+        </div>
+        <div id="display">0</div>
+        <div id="history" class="hidden"></div>
+        <div class="buttons">
+            <!-- Operaciones básicas -->
+            <button class="button" onclick="clearDisplay()">C</button>
+            <button class="button" onclick="recallMemory()">MR</button>
+            <button class="button" onclick="storeMemory()">MS</button>
+            <button class="button" onclick="addToMemory()">M+</button>
+            <button class="button" onclick="toggleSign()">+/-</button>
+            <button class="button" onclick="calculatePercentage()">%</button>
+            <button class="button" onclick="calculateFraction()">1/x</button>
+            <button class="button" onclick="setOperation('/')">/</button>
+            <!-- Números -->
+            <button class="button" onclick="appendNumber(7)">7</button>
+            <button class="button" onclick="appendNumber(8)">8</button>
+            <button class="button" onclick="appendNumber(9)">9</button>
+            <!-- Operaciones -->
+            <button class="button" onclick="setOperation('*')">*</button>
+            <button class="button" onclick="appendNumber(4)">4</button>
+            <button class="button" onclick="appendNumber(5)">5</button>
+            <button class="button" onclick="appendNumber(6)">6</button>
+            <button class="button" onclick="setOperation('-')">-</button>
+            <button class="button" onclick="appendNumber(1)">1</button>
+            <button class="button" onclick="appendNumber(2)">2</button>
+            <button class="button" onclick="appendNumber(3)">3</button>
+            <button class="button" onclick="setOperation('+')">+</button>
+            <!-- Otros botones -->
+            <button class="button" onclick="appendNumber(0)">0</button>
+            <button class="button" style="grid-column: span 2;" onclick="appendNumber('.')">.</button>
+            <button class="button" onclick="compute()">=</button>
+            <button class="button" onclick="calculateSquareRoot()">√</button>
+            <button class="button" onclick="calculatePower()">x²</button>
+        </div>
+    </div>
+    <script src="calculadora.js"></script>
+</body>
+</html>
