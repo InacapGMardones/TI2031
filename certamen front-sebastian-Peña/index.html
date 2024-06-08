@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="calculadora">
+        <div class="display">
+            <input type="text" id="result" disabled>
+        </div>
+        <div class="buttons">
+            <!-- Botones de memoria -->
+            <button class="btn tooltip" onclick="memoryClear()" data-tooltip="Limpiar Memoria (MC)">MC</button>
+            <button class="btn tooltip" onclick="memoryRecall()" data-tooltip="Recuperar Memoria (MR)">MR</button>
+            <button class="btn tooltip" onclick="memoryAdd()" data-tooltip="Añadir a Memoria (M+)">M+</button>
+            <button class="btn tooltip" onclick="memorySubtract()" data-tooltip="Restar de Memoria (M-)">M-</button>
+            <button class="btn tooltip" onclick="memorySave()" data-tooltip="Guardar en Memoria (MS)">MS</button>
+            
+            <!-- Botones de funciones -->
+            <button class="btn tooltip" onclick="appendCharacter('%')" data-tooltip="Porcentaje (%)">%</button>
+            <button class="btn tooltip" onclick="deleteLast()" data-tooltip="Eliminar Último (CE)"><i class="fas fa-backspace"></i></button>
+            <button class="btn tooltip" onclick="clearDisplay()" data-tooltip="Limpiar Todo (C)"><i class="fa-solid fa-broom"></i></button>
+            <button class="btn tooltip" onclick="appendCharacter('/')" data-tooltip="Dividir (/)"><i class="fas fa-divide"></i></button>
+
+            <!-- Botones de funciones adicionales -->
+            <button class="btn tooltip" onclick="appendCharacter('1/')" data-tooltip="1/x">1/x</button>
+            <button class="btn tooltip" onclick="appendCharacter('Math.pow(')" data-tooltip="Cuadrado (x²)">x²</button>
+            <button class="btn tooltip" onclick="appendCharacter('Math.sqrt(')" data-tooltip="Raíz Cuadrada (√x)">√x</button>
+            <button class="btn tooltip" onclick="appendCharacter('*')" data-tooltip="Multiplicar (*)"><i class="fas fa-times"></i></button>
+
+            <!-- Botones de números -->
+            <button class="btn" onclick="appendCharacter('7')">7</button>
+            <button class="btn" onclick="appendCharacter('8')">8</button>
+            <button class="btn" onclick="appendCharacter('9')">9</button>
+            <button class="btn tooltip" onclick="appendCharacter('-')" data-tooltip="Restar (-)"><i class="fas fa-minus"></i></button>
+
+            <button class="btn" onclick="appendCharacter('4')">4</button>
+            <button class="btn" onclick="appendCharacter('5')">5</button>
+            <button class="btn" onclick="appendCharacter('6')">6</button>
+            <button class="btn tooltip" onclick="appendCharacter('+')" data-tooltip="Sumar (+)"><i class="fas fa-plus"></i></button>
+
+            <button class="btn" onclick="appendCharacter('1')">1</button>
+            <button class="btn" onclick="appendCharacter('2')">2</button>
+            <button class="btn" onclick="appendCharacter('3')">3</button>
+
+            <button class="btn tooltip" onclick="appendCharacter('+/-')" data-tooltip="Cambiar Signo (+/-)">+/-</button>
+            <button class="btn" onclick="appendCharacter('0')" style="grid-column: span 2;">0</button>
+            <button class="btn" onclick="appendCharacter('.')">.</button>
+            
+            <!-- Botón de cálculo -->
+            <button class="btn tooltip" onclick="calculate()" data-tooltip="Calcular (=)" style="background-color: #2980b9; color: white;">=</button>
+            <!-- Botón de historial -->
+            <button class="btn history-btn tooltip" onclick="toggleHistory()" data-tooltip="Ver Historial" style="background-color: #2980b9; color: white;">
+                <i class="fas fa-history"></i>
+            </button>
+            <!-- Botón de memoria -->
+            <button class="btn memory-btn tooltip" onclick="toggleMemory()" data-tooltip="Ver Memoria">M</button>
+        </div>
+    </div>
+    <div class="history-modal" id="history">
+        <div class="history-content">
+            <span class="close" onclick="toggleHistory()">&times;</span>
+            <h2>Historial de Operaciones</h2>
+            <button class="clear-history-btn" onclick="clearHistory()">
+                <i class="fas fa-trash-alt"></i></button>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+    <div class="memory-modal" id="memory">
+        <div class="memory-content">
+            <span class="close" onclick="toggleMemory()">&times;</span>
+            <h2>Historial de Memoria</h2>
+            <button class="clear-memory-btn" onclick="clearMemoryHistory()"><i class="fas fa-trash-alt"></i></button>
+            <ul id="memoryList"></ul>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
