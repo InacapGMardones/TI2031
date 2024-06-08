@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="reiniciarHistorial">Reiniciar Historial</button>
+
+    <div class="calculadora">
+    </div>
+    <div class="historial" id="historial">
+
+    <div class="calculator">
+        <div class="header">ESTÁNDAR</div>
+        <div class="operation" id="operation"></div>
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="button operator">%</button>
+            <button class="button operator">CE</button>
+            <button class="button operator">C</button>
+            <button class="button operator">←</button>
+            <button class="button operator">¹/x</button>
+            <button class="button operator">x²</button>
+            <button class="button operator">2√x</button>
+            <button class="button operator">÷</button>
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button operator">×</button>
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button operator">-</button>
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button operator">+</button>
+            <button class="button ">±</button>
+            <button class="button">0</button>
+            <button class="button">,</button>
+            <button class="botones">=</button>
+        </div>
+    </div>
+    <div class="history" id="history">
+        <h2>Historial de Operaciones</h2>
+        <ul id="history-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
