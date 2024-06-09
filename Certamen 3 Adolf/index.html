@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature de Ventas</title>
+    <link rel="stylesheet" href="./style/style.css"> <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator card">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">                
+                <button type="button" class="fa-solid fa-clock-rotate-left btn-outline-success" id="btn-m-plus"></button>
+                <h1 class="navbar-brand" href="#"> Calculadora Estándar</h1>
+            </nav>
+
+        <!-- Contenedor para mostrar la expresión matemática renderizada por MathJax -->
+        <div id="mathDisplay" class="calculator-screen z-depth-1"></div>
+        <div class="calculator-keys-M">
+            <button type="button" class="memory btn btn-secondary" data-option="m+">M+</button>
+            <button type="button" class="memory btn btn-secondary" data-option="m-">M-</button>
+            <button type="button" class="memory btn btn-secondary" data-option="mr">MR</button>
+            <button type="button" class="memory btn btn-secondary" data-option="mc">MC</button>
+            <button type="button" class="memory btn btn-secondary" data-option="ms">MS</button>
+            <button type="button" class="memory btn btn-secondary" id="btn-m-minus" data-option="m»">M»</button>
+        </div>   
+        <div class="calculator-keys">
+            <button type="button" class="operator btn btn-info" data-operator="percent" >%</button>
+            <button type="button" class="clear btn btn-info" data-option="clearEntry">CE</button>
+            <button type="button" class="clear btn btn-info" data-option="clear">C</button>
+            <button type="button" class="clear btn fa-solid fa-delete-left btn-danger fa-sm" data-option="undo"></button>
+            <!-- botones de 1/x x**2 2sqrx /-->
+            <button type="button" class="operator btn btn-info" data-operator="fraction" >&sup1;/ ₓ</button>
+            <button type="button" class="operator btn btn-info" data-operator="pow" >x&sup2;</button>
+            <button type="button" class="operator btn btn-info" data-operator="sqrt" >2&radic;x</button>
+            <button type="button" class="operator btn btn-info" data-operator="divide" >&divide;</button>
+            <!-- botones basicos-->
+            <button type="button" value="7" class="btn btn-light waves-effect" data-number>7</button>
+            <button type="button" value="8" class="btn btn-light waves-effect" data-number>8</button>
+            <button type="button" value="9" class="btn btn-light waves-effect" data-number>9</button>
+            <button type="button" class="operator btn btn-info" data-operator="multiply">&times;</button>
+
+            <button type="button" value="4" class="btn btn-light waves-effect" data-number>4</button>
+            <button type="button" value="5" class="btn btn-light waves-effect" data-number>5</button>
+            <button type="button" value="6" class="btn btn-light waves-effect" data-number>5</button>
+            <button type="button" class="operator btn btn-info" data-operator="minus">&minus;</button>
+
+            <button type="button" value="1" class="btn btn-light waves-effect" data-number>1</button>
+            <button type="button" value="2" class="btn btn-light waves-effect" data-number>2</button>
+            <button type="button" value="3" class="btn btn-light waves-effect" data-number>3</button>
+            <button type="button" class="operator btn btn-info" data-operator="plus">&plus;</button>
+
+            <button type="button" class="reverse function btn btn-secondary"  data-option="reverse" >+/-</button>          
+            <button type="button" value="0" class="btn btn-light waves-effect" data-number>0</button>
+            <button type="button" class="decimal function btn btn-secondary"  data-option="dot" >.</button>
+            <button type="button" class="operator equal-sign btn btn-primary" data-operator="equal">=</button>
+        </div>
+    </div>
+    <div class="container-M">
+        <div class="card" id="history-card" style="display: none;">
+            <h2 class="card-header">Historial</h2>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Operación</th>
+                            <th>Resultado</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card" id="memory-card" style="display: none;">
+            <h2 class="card-header">Historial de Memoria</h2>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Memoria</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="memory">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/0a42890f20.js" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>
