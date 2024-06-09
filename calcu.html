@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="sidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" id="closeSidebarBtn">&times;</a>
+            <ul id="lista-memoria" class="numeros">
+            </ul>
+        </div>
+
+        <div id="historySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" id="closeHistorySidebarBtn">&times;</a>
+            <button id="clearHistoryBtn">Eliminar todo</button>
+            <ul id="lista-historial" class="numeros">
+            </ul>
+        </div>
+        
+
+        <div class="calculator">
+            <div class="top-bar">
+                <button class="btnm" id="openHistoryBtn">Historial</button>
+            </div>
+            <div class="display">
+                <input type="text" id="display" value="0" disabled>
+            </div>
+            <div class="buttonsm" id="buttonsm">
+                <button class="btnm" id="mcBtn" onclick="limpiarMemoria()" disabled>MC</button>
+                <button class="btnm" id="mrBtn" onclick="recuperarMemoria()" disabled>MR</button>
+                <button class="btnm" onclick="agregarMemoria()">M+</button>
+                <button class="btnm" onclick="restarMemoria()">M-</button>
+                <button class="btnm" onclick="almacenarMemoria()">MS</button>
+                <button class="btnm" id="openSidebarBtn" onclick="actualizarListaMemoria()" disabled>M</button>
+            </div>
+            <div class="buttons">
+                <button class="btn" onclick="ingresarOperador('%')">%</button>
+                <button class="btn" onclick="borrarEntrada()">CE</button>
+                <button class="btn" onclick="borrarTodo()">C</button>
+                <button class="btn" onclick="borrarUltimo()">DEL</button>
+
+                <button class="btn" onclick="calcular('1/x')">1/x</button>
+                <button class="btn" onclick="calcular('sqr')">x&sup2;</button>
+                <button class="btn" onclick="calcular('sqrt')">&radic;x</button>
+                <button class="btn" onclick="ingresarOperador('/')">÷</button>
+
+                <button class="btn" onclick="ingresarDigito(7)">7</button>
+                <button class="btn" onclick="ingresarDigito(8)">8</button>
+                <button class="btn" onclick="ingresarDigito(9)">9</button>
+                <button class="btn" onclick="ingresarOperador('*')">x</button>
+
+                <button class="btn" onclick="ingresarDigito(4)">4</button>
+                <button class="btn" onclick="ingresarDigito(5)">5</button>
+                <button class="btn" onclick="ingresarDigito(6)">6</button>
+                <button class="btn" onclick="ingresarOperador('-')">-</button>
+
+                <button class="btn" onclick="ingresarDigito(1)">1</button>
+                <button class="btn" onclick="ingresarDigito(2)">2</button>
+                <button class="btn" onclick="ingresarDigito(3)">3</button>
+                <button class="btn" onclick="ingresarOperador('+')">+</button>
+
+                <button class="btn" onclick="cambiarSigno()">±</button>
+                <button class="btn" onclick="ingresarDigito(0)">0</button>
+                <button class="btn" onclick="ingresarDecimal()">,</button>
+                <button class="btn" onclick="calcularResultado()">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
